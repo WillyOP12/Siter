@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Siter</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KDTwhLS0gVXBsb2FkZWQgdG86IFNWRyBSZXBvLCB3d3cuc3ZncmVwby5jb20sIFRyYW5zZm9ybWVkIGJ5OiBTVkcgUmVwbyBNaXhlciBUb29scyAtLT4KPHN2ZyB3aWR0aD0iODAwcHgiIGhlaWdodD0iODAwcHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KDTxnIGlkPSJTVkdSZXBvX2JnQ2FycmllciIgc3Ryb2tlLXdpZHRoPSIwIi8+Cg08ZyBpZD0iU1ZHUmVwb190cmFjZXJDYXJyaWVyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KDTxnIGlkPSJTVkdSZXBvX2ljb25DYXJyaWVyIj4gPGcgaWQ9IlN5c3RlbSAvIFdpbmRvd19UZXJtaW5hbCI+IDxwYXRoIGlkPSJWZWN0b3IiIGQ9Ik00IDZIMjBNMTYgMTZIMTNNOCAxMkwxMCAxNEw4IDE2TTMgMTYuODAwMlY3LjIwMDJDMyA2LjA4MDA5IDMgNS41MTk2MiAzLjIxNzk5IDUuMDkxOEMzLjQwOTczIDQuNzE1NDcgMy43MTU0NyA0LjQwOTczIDQuMDkxOCA0LjIxNzk5QzQuNTE5NjIgNCA1LjA4MDA5IDQgNi4yMDAyIDRIMTcuODAwMkMxOC45MjAzIDQgMTkuNDc5NiA0IDE5LjkwNzQgNC4yMTc5OUMyMC4yODM3IDQuNDA5NzMgMjAuNTkwNSA0LjcxNTQ3IDIwLjc4MjIgNS4wOTE4QzIxIDUuNTE5MiAyMSA2LjA3ODk5IDIxIDcuMTk2OTFWMTYuODAzMUMyMSAxNy45MjEgMjEgMTguNDggMjAuNzgyMiAxOC45MDc0QzIwLjU5MDUgMTkuMjgzNyAyMC4yODM3IDE5LjU5MDUgMTkuOTA3NCAxOS43ODIyQzE5LjQ4IDIwIDE4LjkyMSAyMCAxNy44MDMxIDIwTDYuMTk2OTQgMjBDNS4wNzkgMjAgNC41MTkyMSAyMCA0LjA5MTggMTkuNzgyMkMzLjcxNTQ3IDE5LjU5MDUgMy40MDk3MyAxOS4yODM3IDMuMjE3OTkgMTguOTA3NEMzIDE4LjQ3OTYgMyAxNy45MjAzIDMgMTYuODAwMloiIHN0cm9rZT0iIzAwZmY2NiIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4gPC9nPiA8L2c+Cg08L3N2Zz4=" />
+
+  <style>
+    :root {
+      --bg: #050805;
+      --bg2: #0b120b;
+      --card: rgba(10,20,10,0.92);
+      --green: #00ff66;
+      --green2: #4fa86b;
+      --text: #b7ffcb;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      font-family: "Courier New", monospace;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top, #103018 0%, transparent 40%),
+        linear-gradient(180deg, var(--bg), var(--bg2));
+    }
+
+    .terminal {
+      width: 100%;
+      max-width: 560px;
+      background: var(--card);
+      border: 1px solid var(--green);
+      border-radius: 18px;
+      padding: 30px;
+      box-shadow: 0 0 25px rgba(0,255,102,0.2);
+      position: relative;
+    }
+
+    .terminal::before {
+      content: "SITER TERMINAL";
+      position: absolute;
+      top: -12px;
+      left: 20px;
+      background: #000;
+      color: var(--green);
+      border: 1px solid var(--green);
+      border-radius: 999px;
+      padding: 2px 10px;
+      font-size: 0.8rem;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      color: var(--green);
+      font-size: 2.2rem;
+      text-shadow: 0 0 12px rgba(0,255,102,0.5);
+    }
+
+    p {
+      margin-bottom: 22px;
+      color: var(--green2);
+      line-height: 1.5;
+    }
+
+    label {
+      display: block;
+      margin: 16px 0 8px;
+      color: var(--green);
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 13px;
+      background: #020402;
+      border: 1px solid #1a7a44;
+      border-radius: 10px;
+      color: var(--text);
+      font-size: 1rem;
+      font-family: inherit;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: var(--green);
+      box-shadow: 0 0 10px rgba(0,255,102,0.3);
+    }
+
+    button {
+      width: 100%;
+      margin-top: 24px;
+      padding: 14px;
+      border-radius: 12px;
+      border: 1px solid var(--green);
+      background: rgba(0,255,102,0.08);
+      color: var(--green);
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: rgba(0,255,102,0.16);
+      box-shadow: 0 0 18px rgba(0,255,102,0.2);
+    }
+
+    .status {
+      margin-top: 18px;
+      padding: 14px;
+      border-radius: 10px;
+      background: rgba(0,0,0,0.4);
+      border: 1px solid rgba(0,255,102,0.15);
+      min-height: 60px;
+      word-break: break-word;
+    }
+
+    footer {
+      margin-top: 22px;
+      color: #417e54;
+      font-size: 0.85rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <main class="terminal">
+    <div style="display:flex;align-items:center;gap:12px;">
+  <img src="data:image/svg+xml;base64,PCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KDTwhLS0gVXBsb2FkZWQgdG86IFNWRyBSZXBvLCB3d3cuc3ZncmVwby5jb20sIFRyYW5zZm9ybWVkIGJ5OiBTVkcgUmVwbyBNaXhlciBUb29scyAtLT4KPHN2ZyB3aWR0aD0iODAwcHgiIGhlaWdodD0iODAwcHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KDTxnIGlkPSJTVkdSZXBvX2JnQ2FycmllciIgc3Ryb2tlLXdpZHRoPSIwIi8+Cg08ZyBpZD0iU1ZHUmVwb190cmFjZXJDYXJyaWVyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KDTxnIGlkPSJTVkdSZXBvX2ljb25DYXJyaWVyIj4gPGcgaWQ9IlN5c3RlbSAvIFdpbmRvd19UZXJtaW5hbCI+IDxwYXRoIGlkPSJWZWN0b3IiIGQ9Ik00IDZIMjBNMTYgMTZIMTNNOCAxMkwxMCAxNEw4IDE2TTMgMTYuODAwMlY3LjIwMDJDMyA2LjA4MDA5IDMgNS41MTk2MiAzLjIxNzk5IDUuMDkxOEMzLjQwOTczIDQuNzE1NDcgMy43MTU0NyA0LjQwOTczIDQuMDkxOCA0LjIxNzk5QzQuNTE5NjIgNCA1LjA4MDA5IDQgNi4yMDAyIDRIMTcuODAwMkMxOC45MjAzIDQgMTkuNDc5NiA0IDE5LjkwNzQgNC4yMTc5OUMyMC4yODM3IDQuNDA5NzMgMjAuNTkwNSA0LjcxNTQ3IDIwLjc4MjIgNS4wOTE4QzIxIDUuNTE5MiAyMSA2LjA3ODk5IDIxIDcuMTk2OTFWMTYuODAzMUMyMSAxNy45MjEgMjEgMTguNDggMjAuNzgyMiAxOC45MDc0QzIwLjU5MDUgMTkuMjgzNyAyMC4yODM3IDE5LjU5MDUgMTkuOTA3NCAxOS43ODIyQzE5LjQ4IDIwIDE4LjkyMSAyMCAxNy44MDMxIDIwTDYuMTk2OTQgMjBDNS4wNzkgMjAgNC41MTkyMSAyMCA0LjA5MTggMTkuNzgyMkMzLjcxNTQ3IDE5LjU5MDUgMy40MDk3MyAxOS4yODM3IDMuMjE3OTkgMTguOTA3NEMzIDE4LjQ3OTYgMyAxNy45MjAzIDMgMTYuODAwMloiIHN0cm9rZT0iIzAwZmY2NiIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4gPC9nPiA8L2c+Cg08L3N2Zz4=" style="width:42px;height:42px;filter:drop-shadow(0 0 6px #00ff66);" />
+  <h1>Siter_</h1>
+</div>
+
+    <p>> Localitzador de Google Sites de l’Institut La Sagrera - Sant Andreu.</p>
+
+    <form id="form">
+      <label for="nom">Nom</label>
+      <input type="text" id="nom" name="given-name" autocomplete="given-name" required>
+
+      <label for="cognom">Primer cognom</label>
+      <input type="text" id="cognom" name="family-name" autocomplete="family-name" required>
+
+      <label for="any">Any de naixement</label>
+      <input type="number" id="any" name="bday-year" autocomplete="bday-year" required>
+
+      <button type="submit">Buscar</button>
+    </form>
+
+    <div class="status" id="status">Esperant entrada...</div>
+  </main>
+
+  <footer>
+    Propietat de l’Institut La Sagrera - Sant Andreu
+  </footer>
+
+  <script>
+    const form = document.getElementById('form');
+    const statusBox = document.getElementById('status');
+
+    function normalize(text) {
+      return text
+        .trim()
+        .toLowerCase()
+        .replace(/ç/g, 'c')
+        .replace(/ñ/g, 'n')
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/\s+/g, '');
+    }
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const nom = normalize(document.getElementById('nom').value);
+      const cognom = normalize(document.getElementById('cognom').value);
+      const any = document.getElementById('any').value.trim();
+
+      const base = nom[0] + cognom;
+      const any2 = any.slice(-2);
+
+      const urlAmbAny = `https://sites.google.com/inslasagrera.cat/${base}${any2}`;
+      const urlSenseAny = `https://sites.google.com/inslasagrera.cat/${base}`;
+
+      window.open(urlAmbAny, '_blank');
+
+      statusBox.innerHTML = '>&nbsp;No funciona? <a href="' + urlSenseAny + '" target="_blank" style="color:#00ff66;text-decoration:underline;">Prova sense any</a>';
+    });
+  </script>
+
+</body>
+</html>
