@@ -191,7 +191,11 @@
       const urlAmbAny = `https://sites.google.com/inslasagrera.cat/${base}${any2}`;
       const urlSenseAny = `https://sites.google.com/inslasagrera.cat/${base}`;
 
-      window.open(urlAmbAny, '_blank');
+      const a = document.createElement('a');
+a.href = urlAmbAny;
+a.target = '_blank';
+a.rel = 'noopener noreferrer';
+a.click();
 
       statusBox.innerHTML = '>&nbsp;No funciona? <a href="' + urlSenseAny + '" target="_blank" style="color:#00ff66;text-decoration:underline;">Prova sense any</a>';
     });
