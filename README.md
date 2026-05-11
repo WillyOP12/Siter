@@ -1,6 +1,8 @@
 # Siter
 
-**Siter** és una petita eina web que genera i obre enllaços de Google Sites a partir del nom, el primer cognom i l'any de naixement d'una persona.
+No saps quin és l'enllaç dels teus companys? Tenim la solució per a tu!
+
+**Siter** és una petita eina web gratuïta i de codi obert que genera i obre enllaços de Google Sites a partir del nom, el primer cognom i l'any de naixement d'una persona.
 
 ## Característiques
 
